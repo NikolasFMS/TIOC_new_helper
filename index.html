@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+    <!-- Предварительная загрузка  -->
+
+    <link rel="preload" href="css/styles.css" as="style">
+
+    <title>The Isle of Cats helper</title>
+</head>
+
+<body>
+    <!-- Основной контент страницы -->
+    <div class="app">
+
+        <!-- Место, где будут динамически создаваться страницы -->
+        <div class="content" id="content">
+
+            <div class="page n1">
+                <div class="button-container">
+                    <div class="button start" onclick="start()">START</div>
+                </div>
+            </div>
+
+            <div class="page n2" style="display: none;">
+                <button class="button logout" onclick="next(this)">←</button>
+
+                <div class="background top"></div>
+                <div class="background bottom"></div>
+
+                <div class="watchCard" onclick="hideShowCard()"></div>
+
+                <div class="round-container">
+                    <div class="round-number">ROUND 1</div>
+                </div>
+
+                <div class="cards-container">
+                    <div class="card cat" id="cat1" onclick="showCard(this)"></div>
+                    <div class="card les" id="les1" onclick="showCard(this)"></div>
+                    <div class="card cat" id="cat2" onclick="showCard(this)"></div>
+                    <div class="card les" id="les2" onclick="showCard(this)"></div>
+                    <div class="card cat" id="cat3" onclick="showCard(this)"></div>
+                    <div class="card cat" id="cat4" onclick="showCard(this)"></div>
+                    <div class="card les" id="les3" onclick="showCard(this)"></div>
+                    <div class="card cat" id="cat5" onclick="showCard(this)"></div>
+                    <div class="card cat" id="cat6" onclick="showCard(this)"></div>
+                    <div class="card cat" id="cat7" onclick="showCard(this)"></div>
+                    <div class="card cat" id="cat8" onclick="showCard(this)"></div>
+                    <div class="card les" id="les4" onclick="showCard(this)"></div>
+                </div>
+
+                <div class="button-container">
+                    <div class="button next" onclick="next(this)">NEXT</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay" style="display: none;">
+            <div class="popup" id="popup">
+                <div class="h1" id="first">ROUND</div>
+                <div class="popup-container">
+                    <div class="button action-button next-round" id="button1" onclick="openPopupNext(this)">NEXT</div>
+                    <div class="button action-button back" id="button1" onclick="back()">BACK</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Прелоадер -->
+        <div class="preloader_malc" id="preloader_malc">
+            <div>Loading...</div>
+        </div>
+
+        <script src="scripts/script.js"></script>
+</body>
+
+</html>
